@@ -52,4 +52,8 @@ public class Workshop {
                 + " corner of the shop");
                 
     }
+    
+    public static void menu(){
+        
+    }
 }
