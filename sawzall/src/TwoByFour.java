@@ -12,18 +12,17 @@ public class TwoByFour {
     private double boardLength;
     public final String BOARDTYPE = "Wood";
     
-    public void cutBoardLength(int cutLength){
+    TwoByFour(double length){
+        boardLength = length;
+    }
+    
+    public void cutBoardLength(double cutLength){
         if(cutLength > boardLength){
             System.out.println("Impossible! That board is smaller than the size "
                     + "you are trying to cut.");
         }else 
-            System.out.println("Cutting board to size.");
+            System.out.println("Cutting board to " + cutLength + " .");
             boardLength = cutLength;
-    }
-    
-    public void setBoardLength(double setLength){
-        boardLength = setLength;
-        
     }
     
     public double getBoardLength(){
