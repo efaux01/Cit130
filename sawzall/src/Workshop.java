@@ -87,12 +87,13 @@ public class Workshop {
                 break;
             case 3:
                 printList();
+                menu();
                 break;
             case 4:
                 System.out.println("Which board would you like to pick up?");
                 printList();
                 choice = getIntInput();
-                pile.get(choice);
+                boardInHand = pile.get(choice);
                 pickedUpBoard();
                 break;
             default:
@@ -111,7 +112,7 @@ public class Workshop {
     public static void printList(){
         iter = pile.listIterator(0);
         while(iter.hasNext()){
-            System.out.print(iter.nextIndex() + ". Length: " 
+            System.out.println(iter.nextIndex() + ". Length: " 
                     + iter.next().getBoardLength());
         }
     }
