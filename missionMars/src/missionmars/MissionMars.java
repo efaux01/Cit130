@@ -6,8 +6,8 @@
 package missionmars;
 import java.util.Scanner;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.ListIterator;
+import java.util.Set;
+import java.util.Iterator;
 
 /**
  *
@@ -115,8 +115,8 @@ public class MissionMars {
     }//closes endProgram
     
     public static void showKeyList(){
-        LinkedList<String> list = new LinkedList(aresI.keySet());
-        ListIterator<String> iter = list.listIterator(0);
+        Set<String> list = aresI.keySet();
+        Iterator<String> iter = list.iterator();
         int indexNum = 1;
         while(iter.hasNext()){
             System.out.println(indexNum + "." + iter.next());
